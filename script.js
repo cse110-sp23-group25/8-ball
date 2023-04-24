@@ -1,3 +1,4 @@
+// different types of answer possibilites depending on coffee type selected
 const answers = {
   espresso: {
     positive: [
@@ -65,6 +66,7 @@ const answers = {
   }
 };
 
+/* Generates different answers, depending on coffee selection */
 function shake() {
   const answerDiv = document.querySelector(".answer");
   answerDiv.innerHTML = "";
@@ -100,6 +102,7 @@ form.addEventListener("submit", function(event) {
   shake();
 });
 
+/* Allows answer to fade in, as if it is real steam */
 const fadeButton = document.getElementById('rollButton');
 const fadeText = document.getElementById('fadeText');
 let fading = false;
