@@ -99,3 +99,19 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
   shake();
 });
+
+const fadeButton = document.getElementById('rollButton');
+const fadeText = document.getElementById('fadeText');
+let fading = false;
+
+fadeButton.addEventListener('click', function() {
+  if (!fading) {
+    fading = true;
+    fadeText.style.opacity = 0;
+    setTimeout(function() {
+      shake();
+      fadeText.style.opacity = 1;
+      fading = false;
+    }, 1000);
+  }
+});
