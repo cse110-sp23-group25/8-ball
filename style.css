@@ -63,3 +63,51 @@
     cursor: pointer;
   }
   
+  body {
+    background-color: #F5E5C7; /* light brown */
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    background-color: #D4A190; /* darker brown */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #583A35; /* dark red */
+    margin-bottom: 10px;
+  }
+  
+  select {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  option {
+    font-size: 18px;
+  }
+  
+  input[type=submit] {
+    background-color: #583A35; /* dark red */
+    color: #FFFFFF; /* white */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #7E4A46; /* lighter red */
+  }
+  
