@@ -43,6 +43,7 @@
     transform: translateX(-50%);
     width: 80%;
     height: 80px;
+    font-family: cloudFont;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -111,3 +112,7 @@
     background-color: #7E4A46; /* lighter red */
   }
   
+  @font-face{
+    font-family: cloudFont;
+    src: url(Alphasmoke-OOX6.ttf);
+  }
