@@ -94,12 +94,19 @@ function shake() {
   const index = Math.floor(Math.random() * responses.length);
   const answer = responses[index];
   answerDiv.innerHTML = answer;
+    // Play the sound
+  const sound = document.getElementById("sound");
+  sound.currentTime = 0;
+  sound.play();
 }
 
 const form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
   event.preventDefault();
   shake();
+  const sound = document.getElementById("sound");
+  sound.currentTime = 0;
+  sound.play();
 });
 
 /* Allows answer to fade in, as if it is real steam */
@@ -115,6 +122,9 @@ fadeButton.addEventListener('click', function() {
       shake();
       fadeText.style.opacity = 1;
       fading = false;
+      const sound = document.getElementById("sound");
+      sound.currentTime = 0;
+      sound.play();
     }, 1000);
   }
 });
