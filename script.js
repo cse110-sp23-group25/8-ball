@@ -118,3 +118,22 @@ fadeButton.addEventListener('click', function() {
     }, 1000);
   }
 });
+
+let moving = false;
+fadeButton.addEventListener('click', function() {
+  if (!moving) {
+    moving = true;
+    const startPosition = {x:-100, y:-220};
+    const endPosition = {x:-100, y:-475};
+    let currentPosition = startPosition;
+    let intervalId = setInterval(function() {
+      if (currentPosition.y <= endPosition.y) {
+        clearInterval(intervalId);
+        moving = false;
+      } else {
+        currentPosition.y -= 10;
+        fadeText.style.transform = 'translate(' + currentPosition.x + 'px, ' + currentPosition.y + 'px)';
+      }
+    }, 50);
+  }
+});
